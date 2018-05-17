@@ -15,6 +15,11 @@ class Song
     @@all << song
     song
   end
+  def new_by_name(name)
+    song = self.new_by_name
+    song.name = name
+    song
+  end
 
   def self.create_by_name(song)
     song = self.create
@@ -29,7 +34,7 @@ class Song
     end
   end
 
-  
+##################
   def self.find_or_create_by_name(name)
     if self.find_by_name(name)
       self.find_by_name(name)
